@@ -1,6 +1,6 @@
 // Офлайн-режим: сначала сеть (чтобы приходили обновления), без сети — из кеша.
 // Трогаем только файлы самой игры и шрифты. Запросы к Firebase (вход, облако, рейтинг) идут мимо.
-var CACHE = 'nomera-v4';
+var CACHE = 'nomera-v5';
 var FILES = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 var FONT_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com'];
 self.addEventListener('install', function (e) { e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(FILES); })); self.skipWaiting(); });
